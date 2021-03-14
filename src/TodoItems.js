@@ -13,23 +13,16 @@ const TodoItems = ({ setInput, status, setStatus, filtered, setFiltered }) => {
 
   const tComplete = (key) => {
     // console.log(Object.prototype.toString.call(input));
-
+    console.log("zzzzzzzzzz");
     setInput(
       filtered.map((task) => {
         if (task.id == key) {
           task.isCompleted = !task.isCompleted;
-          // task.isPriority = task.isPriority == 1 ? 0 : 1;
-          // if (task.isPriority == true) {
-          //   task.sorting = task.sorting == 1 ? 0 : 1;
-          // }
-          // task.isPriority = !task.isPriority;
-          // task.sorting = task.sorting == 1 ? 0 : 1;
+          task.sorting = task.isCompleted == true ? -1 : 1;
         }
         return task;
       })
     );
-
-    console.log(filtered);
   };
   const tEdit = (key) => {
     setInput(

@@ -12,7 +12,6 @@ const TodoTemplate = () => {
 
   /////////////////////
   useEffect(() => {
-    console.log(filtered);
     if (status == "completed") {
       setFiltered(input.filter((x) => x.isCompleted === true));
     } else if (status == "incompleted") {

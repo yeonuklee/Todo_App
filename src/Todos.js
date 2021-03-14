@@ -15,7 +15,6 @@ const Todos = ({ todo, setInput, tRemove, tComplete, tEdit, filtered }) => {
 
   const changeText = (e) => {
     // console.log(todoRef.current.value);
-    // let list = [...input];
     setInput(
       filtered.map((x) => {
         if (x.id == todo.id) {
@@ -27,10 +26,6 @@ const Todos = ({ todo, setInput, tRemove, tComplete, tEdit, filtered }) => {
         return x;
       })
     );
-    // setInput({
-    //   isEditMode: !todo.isEditMode,
-    //   task: todoRef.current.value,
-    // });
   };
   const keyPress = (e) => {
     priority = e.shiftKey ? true : false;
@@ -38,7 +33,6 @@ const Todos = ({ todo, setInput, tRemove, tComplete, tEdit, filtered }) => {
     if (e.key == "Enter") changeText();
   };
   const cancelChange = () => {
-    // let list = [...input];
     setInput(
       filtered.map((task) => {
         if (task.id == todo.id) {
