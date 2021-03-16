@@ -1,4 +1,5 @@
 Simple Todo application using React.
+
 ![Animated-version-todo](https://user-images.githubusercontent.com/52679439/111274360-24264600-85f2-11eb-9dd5-2822763a20e1.gif)
 
 
