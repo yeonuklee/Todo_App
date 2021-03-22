@@ -13,8 +13,9 @@ const Todos = ({ todo, setInput, tRemove, tComplete, tEdit, filtered }) => {
   const newText = "";
   let priority = false;
 
+  //In edit mode, the user is allowed to change the priority status and text.
+  //The value of sorting number is changed depending on the completion and priority status.
   const changeText = (e) => {
-    // console.log(todoRef.current.value);
     setInput(
       filtered.map((x) => {
         if (x.id == todo.id) {
@@ -27,11 +28,15 @@ const Todos = ({ todo, setInput, tRemove, tComplete, tEdit, filtered }) => {
       })
     );
   };
+
+  //The user can undo and reset priority by pressing the key 'shift+enter' in edit mode.
   const keyPress = (e) => {
     priority = e.shiftKey ? true : false;
     console.log("priority", priority);
     if (e.key == "Enter") changeText();
   };
+
+  //When edit cancel button is clicked, It toggles the value of 'isEditMode'.
   const cancelChange = () => {
     setInput(
       filtered.map((task) => {
@@ -42,6 +47,10 @@ const Todos = ({ todo, setInput, tRemove, tComplete, tEdit, filtered }) => {
       })
     );
   };
+
+  //It is called when the value of 'isEditMode' is true.
+  //The use can cancel the edit mode by clicking the delete button.
+  //The use can change the list and update it by clicking complete button.
   const editTodo = (key) => {
     return (
       <div>
@@ -57,6 +66,9 @@ const Todos = ({ todo, setInput, tRemove, tComplete, tEdit, filtered }) => {
     );
   };
 
+  //This is called when the value of 'isEditMode' is false, which is not editing now.
+  //Then, when the text of list is double-clicked, It calls the function 'tEdit' to change the value of 'isEditMode'.
+  //If the value of 'isPriority' is true, It changes the font-weight and '!' mark is added at the beginning of the text.
   const fixedTodo = () => {
     return (
       <span

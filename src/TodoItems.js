@@ -7,12 +7,15 @@ import {
 import Todos from "./Todos";
 
 const TodoItems = ({ setInput, status, setStatus, filtered, setFiltered }) => {
+  //to remove the list that a user selects.
   const tRemove = (key) => {
     setInput(filtered.filter((task) => task.id !== key));
   };
 
+  //when the completed button is clicked, It toggles the value of 'isCompleted'.
+  //If the value of 'isCompleted' that is toggled by the click is true, which means It is completed task,
+  //the soring value becomes -1, so that that list goes down at the bottom of all lists.
   const tComplete = (key) => {
-    // console.log(Object.prototype.toString.call(input));
     setInput(
       filtered.map((task) => {
         if (task.id == key) {
@@ -23,6 +26,8 @@ const TodoItems = ({ setInput, status, setStatus, filtered, setFiltered }) => {
       })
     );
   };
+
+  //When a user double clicks the text of the list, It changes the value of 'isEditMode'
   const tEdit = (key) => {
     setInput(
       filtered.map((task) => {
@@ -42,6 +47,7 @@ const TodoItems = ({ setInput, status, setStatus, filtered, setFiltered }) => {
     );
   };
 
+  //All lists are sorted by value of sorting number(Ascending order).
   filtered.sort((a, b) => {
     return b.sorting - a.sorting;
   });
