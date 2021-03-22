@@ -4,15 +4,15 @@ You can test this out here > https://objective-hermann-09f7df.netlify.app
 ![Animated-version-todo](https://user-images.githubusercontent.com/52679439/111274360-24264600-85f2-11eb-9dd5-2822763a20e1.gif)
 
 
-1. If you add your list with 'shift+enter' key together, It’s checking that item as 'priority' where it highlights with '!' icon. 
-2. You can click '+' icon to add a list or use 'enter' key
-3. Priority lists are placed on the top of all elements
-4. Once you complete your task, it goes on the bottom of all lists
-5. You can edit the task by double clicking the text
-6. Delete and complete  button are on the right
-7. You can undo or set “priority” when you press 'shift+enter' key together in edit mode
-8. You can filter by completion status or view all
-9. When all task are completed, cute puppy pops up! 
+1. If you add your list with 'shift+enter' keys together, It’s checking that item as 'priority' where it highlights with '!' icon. 
+2. You can click '+' icon to add a task or press the 'enter' key.
+3. Priority tasks are placed on the top of the list.
+4. Once a task is completed, it goes on the bottom of the list.
+5. You can edit the task by double clicking the task text.
+6. Delete and complete button are on the right.
+7. You can undo or reset “priority” when you press 'shift+enter' keys together in edit mode.
+8. You can filter by completion status or view all.
+9. When all tasks are completed, cute puppy picture pops up! 
 
 
 # Getting Started with Create React App
