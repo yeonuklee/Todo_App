@@ -13,7 +13,6 @@ const TodoItems = ({ setInput, status, setStatus, filtered, setFiltered }) => {
 
   const tComplete = (key) => {
     // console.log(Object.prototype.toString.call(input));
-    console.log("zzzzzzzzzz");
     setInput(
       filtered.map((task) => {
         if (task.id == key) {

@@ -2,15 +2,14 @@ import React, { useEffect, useState, createContext, Children } from "react";
 import TodoItems from "./TodoItems";
 import Form from "./Form";
 import img from "./img.png";
+import "./App.css";
 
 const TodoTemplate = () => {
   const [task, setTask] = useState("");
   const [input, setInput] = useState([]);
   const [status, setStatus] = useState("all");
   const [filtered, setFiltered] = useState([]);
-  const [dateDue, setDateDue] = useState([]);
 
-  /////////////////////
   useEffect(() => {
     if (status == "completed") {
       setFiltered(input.filter((x) => x.isCompleted === true));
